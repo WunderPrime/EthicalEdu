@@ -32,7 +32,6 @@ Les fichiers uploadés et la base de données sont conservés entre les redémar
 
 ---
 
-## Installation sans Docker (développement local)
 
 ## Installation sans Docker (développement local)
 
@@ -46,13 +45,13 @@ venv\Scripts\activate             # Windows
 pip install -r requirements.txt
 
 # 3. Appliquer les migrations
-python manage.py migrate
+python3 manage.py migrate
 
 # 4. Créer un compte administrateur
-python manage.py createsuperuser
+python3 manage.py createsuperuser
 
 # 5. Lancer le serveur de développement
-python manage.py runserver
+python3 manage.py runserver
 ```
 
 L'application est ensuite accessible sur http://127.0.0.1:8000/
@@ -66,13 +65,13 @@ Le compte **Administrateur** se crée en une seule commande (User superuser +
 Profil Admin créés ensemble) :
 
 ```bash
-python manage.py creer_admin --username admin --email admin@emsi.ma --password votreMotDePasse
+python3 manage.py creer_admin --username admin --email admin@emsi.ma --password votreMotDePasse
 ```
 
 ou en mode interactif, sans arguments (le mot de passe est alors masqué à la saisie) :
 
 ```bash
-python manage.py creer_admin
+python3 manage.py creer_admin
 ```
 
 L'administrateur se connecte ensuite normalement sur `/connexion/`, comme les
@@ -82,7 +81,7 @@ automatiquement redirigé vers son tableau de bord dédié.
 ## Structure du projet
 
 ```
-projet_django/
+EthcalEdu/
 ├── manage.py
 ├── settings.py / urls.py / wsgi.py / asgi.py
 ├── db.sqlite3
